@@ -1,0 +1,43 @@
+<div id="home" class="container page">
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1>Beer Token Calculator</h1>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row" ng-if="!dropped">
+		<div class="col-md-12" id="dangerzone">
+			<div class="well">
+				<h4 class="text-center">Drag your CSV file here.</h4>
+			</div>			
+		</div>
+	</div>
+
+	<div class="row" ng-if="dropped">
+		<div class="col-md-12">
+
+			<ul>
+				<li ng-repeat="(key, value) in tags">{{ key }}: £{{ value }}</li>
+			</ul>
+
+			<!-- <table class="table">
+				<tr>
+					<th>Date</th>
+					<th>Value</th>
+					<th>Description</th>
+				</tr>
+				<tr ng-repeat="row in data.data | filter:search">
+					<td>{{ row['Date'] }}</td>
+					<td>{{ row['Value'] }}</td>
+					<td>{{ row['Description'] }}</td>
+				</tr>
+			</table> -->
+
+		</div>
+	</div>
+	
+</div>
