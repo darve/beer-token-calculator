@@ -31,21 +31,14 @@ module.exports = ['$scope', '$timeout', '$filter', function($scope, $timeout, $f
         for ( var v in $scope.data.data ) {
             for ( var x in $scope.categories ) {
                 for ( var f in $scope.categories[x] ) {
-                    // console.log($scope.data.data[v].Description.toLowerCase(), $scope.categories[x][f]);
-
                     if ( $scope.data.data[v] && $scope.data.data[v].Description ) {
                         if ( $scope.data.data[v].Description.toLowerCase().indexOf($scope.categories[x][f]) ) {
                             $scope.tags[x] += parseInt($scope.data.data[v].Value, 10);
                         }
                     }
-                    // debugger;
                 }
             }
         }
-    };
-
-    $scope.newtag = function() {
-
     };
 
     $timeout(function() {
@@ -71,7 +64,6 @@ module.exports = ['$scope', '$timeout', '$filter', function($scope, $timeout, $f
                             header: true
                         });
                         scan();
-                        console.log($scope.tags);
                         $scope.dropped = true;
                     });
                 });
