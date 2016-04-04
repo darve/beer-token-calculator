@@ -27,6 +27,7 @@ module.exports = ['$scope', '$timeout', '$filter', function($scope, $timeout, $f
     $scope.md = '';
     $scope.search = '';
 
+    // Would you look at the fucking state of this.
     function scan() {
         for ( var v in $scope.data.data ) {
             for ( var x in $scope.categories ) {
@@ -41,6 +42,7 @@ module.exports = ['$scope', '$timeout', '$filter', function($scope, $timeout, $f
         }
     };
 
+    // WAHEY
     $timeout(function() {
 
         var dangerzone = document.getElementById('dangerzone');
@@ -73,5 +75,4 @@ module.exports = ['$scope', '$timeout', '$filter', function($scope, $timeout, $f
             return false;
         };
     });
-
 }];

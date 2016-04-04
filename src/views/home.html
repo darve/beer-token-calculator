@@ -19,24 +19,9 @@
 
 	<div class="row" ng-if="dropped">
 		<div class="col-md-12">
-
 			<ul>
 				<li ng-repeat="(key, value) in tags">{{ key }}: £{{ value }}</li>
 			</ul>
-
-			<!-- <table class="table">
-				<tr>
-					<th>Date</th>
-					<th>Value</th>
-					<th>Description</th>
-				</tr>
-				<tr ng-repeat="row in data.data | filter:search">
-					<td>{{ row['Date'] }}</td>
-					<td>{{ row['Value'] }}</td>
-					<td>{{ row['Description'] }}</td>
-				</tr>
-			</table> -->
-
 		</div>
 	</div>
 	
